@@ -10,6 +10,12 @@ db.on('error', error => console.error(error));
 db.once('open', () => console.log('Connected to Database!'));
 
 app.use(express.json());
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Content-Type");
+    res.header("Access-Control-Allow-Methods", "GET, POST, PATCH, PUT, DELETE");
+    next();
+});
 
 const subscriberRouter = require('./routes/subscribers');
 app.use('/subscribers', subscriberRouter);
@@ -17,7 +23,7 @@ app.use('/subscribers', subscriberRouter);
 
 
 
-app.listen(3000, () => console.log("Server Started!"));
+app.listen(process.env.PORT || 3000);
 
 
 

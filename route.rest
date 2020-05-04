@@ -3,7 +3,7 @@ GET http://localhost:3000/subscribers
 
 ###
 
-GET http://localhost:3000/subscribers/5eab07b1d45e6323bcc77795
+GET http://localhost:3000/subscribers/5eaf371e12e6bf26c0b68afe
 
 ###
 
@@ -17,24 +17,18 @@ Content-Type: application/json
 
 ###
 
-PATCH http://localhost:3000/subscribers/5eaafb287968f8272c17e062
+PATCH  http://localhost:3000/subscribers/5eaf371e12e6bf26c0b68afe
 Content-Type: application/json
 
 {
-  "name": "Andrew",
-  "subscribedToChannel": "Wylsacom"
+   "name": "Logan",
+   "subscribedToChannel": "Logan Paul"
 }
 
 ###
 
-DELETE http://localhost:3000/subscribers/5eab07b1d45e6323bcc77795
+DELETE http://localhost:3000/subscribers/5eaf357d12e6bf26c0b68afb
 
 ###
-
-
-
-
-
-
 
 
